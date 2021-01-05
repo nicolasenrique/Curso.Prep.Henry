@@ -5,6 +5,15 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+  let result;
+  if (x > y || x === y ) {
+    result = x;
+  } else {
+    result = y;
+  }
+  return result;
+
+
 }
 
 function saludo(idioma) {
@@ -13,19 +22,44 @@ function saludo(idioma) {
   // Si "idioma" es "mandarin", devuelve "Ni Hao!"
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
-  // Tu código:
+  // Tu código
+  let result;
+  if (idioma === "aleman" ) {
+    result = "Guten Tag!";}
+    else if (idioma === "mandarin" ) {
+      result = "Ni Hao!";}
+      else if (idioma === "ingles" ) {
+        result = "Hello!";}
+   else { 
+    result = "Hola!";}
+  return result;
 }
 
 function esDiezOCinco(numero) {
     // Devuelve "true" si "numero" es 10 o 5
     // De lo contrario, devuelve "false"
     // Tu código:
-}
+    
+    let result;
+    if (numero === 10 || numero === 5 ) {
+      result = true;
+    } else {
+      result = false;
+    }
+    return result;
+  }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+let result;
+if (numero <50 && numero>20) {
+  result = true;
+} else {
+  result = false;
+}
+return result;
 }
 
 function esEntero(numero) {
@@ -36,6 +70,13 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  let result;
+  if (Number.isInteger(numero)){
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 }
 
 function fizzBuzz(numero) {
@@ -43,6 +84,16 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  let result;
+  if (numero%3===0 && numero%5===0){
+    result = "fizzbuzz";
+  }
+  else if (numero%3 === 0){
+    result = "fizz";}
+    else if (numero%5===0){
+      result = "buzz";}
+  else {result = numero}
+  return result;
 }
 
 function esPrimo(numero) {
@@ -51,8 +102,23 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-}
+   if (numero === 2) {
+    return true;
+  } else if (numero > 1) {
+    for (var i = 2; i < numero; i++) {
 
+      if (numero % i !== 0) {
+        return true;
+      } else if (numero === i * i) {
+        return false
+      } else {
+        return false;
+      }
+    }
+  } else {
+    return false;
+  }
+}
 
 
 // No modificar nada debajo de esta línea
